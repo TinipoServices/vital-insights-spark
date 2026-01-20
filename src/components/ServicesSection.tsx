@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import heroImage from "@/assets/Digital-First.jpeg";
 import { useRef, useState } from "react";
 import { 
   Brain, 
@@ -104,9 +105,17 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="flex text-center mb-16 flex-row gap-20 items-center"
         >
-          <span className="text-primary font-medium text-sm tracking-wider uppercase">
+          <div className="bg-white w-[50%]">
+            <img
+              src={heroImage}   // path or URL
+              alt="VIL Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div>
+          <span className="text-primary font-medium text-2xl tracking-wider uppercase">
             Our Services
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">
@@ -118,6 +127,7 @@ const ServicesSection = () => {
             to high-performance digital experiences—designed to turn complexity into your 
             primary competitive advantage.
           </p>
+          </div>
         </motion.div>
 
         {/* Services Navigation */}
@@ -138,7 +148,7 @@ const ServicesSection = () => {
               }`}
             >
               <service.icon className="w-4 h-4" />
-              <span className="hidden sm:inline">{service.title.split(" ")[0]}</span>
+              <span className="hidden sm:inline">{service.title}</span>
               <span className="sm:hidden">{service.title.split(" ")[0].slice(0, 6)}</span>
             </button>
           ))}

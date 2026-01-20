@@ -2,27 +2,28 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Shield, Zap, Sparkles, Target, Eye } from "lucide-react";
+import heroImage from "@/assets/Cognitive-BI-Detail.jpg";
 
 const pillars = [
   {
     icon: Users,
     title: "Client-First Partnership",
-    description: "We co-create as an extension of your team, eliminating conflicts of interest and focusing deeply on your specific business KPIs.",
+    description: "At Vital Insight Labs, we Co-Create We don't operate as a detached vendor; VIL function as an extension of your team. By eliminating conflicts of interest and focusing deeply on client’s specific business KPIs, we ensure every solution is handcrafted to meet the unique commercial or operational needs of our clients",
   },
   {
     icon: Sparkles,
     title: "Digital First Experience",
-    description: "Technology should be intuitive and flawless. We design for the human at the other end of the screen to ensure sustainable transformation.",
+    description: "We believe technology should be intuitive and flawless. Whether it is an internal AI Copilot or a global consumer platform, we design for the human at the other end of the screen to ensure sustainable transformation",
   },
   {
     icon: Shield,
     title: "Deep Domain Expertise",
-    description: "MBAs, Data Scientists, and Domain SMEs with decades of experience in Life Sciences, Pharma, and Retail & Consumer Goods.",
+    description: "Data is meaningless without context. Our team is a powerhouse of diverse talent—comprising MBAs, Data Scientists, Visualisation Experts, and Domain SMEs with decades of experience in Life Sciences, Pharma, and Retail & Consumer Goods",
   },
   {
     icon: Zap,
     title: "Agile & Value-Driven",
-    description: "We prioritize high-impact wins first, delivering actionable discoveries that are easy to adopt and ready to scale.",
+    description: "In a fast-moving market, scale and speed is a metric of success. At VIL, we utilize an agile delivery model that prioritizes high-impact wins first. Our commitment is to deliver actionable discoveries which are timely and future-proof, that are easy to adopt, transparent to audit, and ready to scale as your business grows ensuring a tangible Return on Investment (ROI) for every project we undertake",
   },
 ];
 
@@ -43,7 +44,7 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm tracking-wider uppercase">
+          <span className="text-primary font-medium text-2xl tracking-wider uppercase">
             About Us
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">
@@ -62,13 +63,16 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass-card rounded-2xl p-8 md:p-12 mb-16"
+          className="rounded-2xl p-8 md:p-12 mb-16"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="font-heading text-2xl font-semibold mb-4">Our Story</h3>
+              <h3 className="font-heading text-4xl font-semibold mb-4">Our Story</h3>
               <p className="text-muted-foreground mb-4">
-                Our story is one of convergence. We realized that a future-proof data pipeline 
+                Our story is one of <span className="italic">convergence</span>.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                We realized that a future-proof data pipeline 
                 is only as effective as the digital experience that delivers it.
               </p>
               <p className="text-muted-foreground">
@@ -77,7 +81,7 @@ const AboutSection = () => {
                 glass box enterprise solutions that empower our clients to drive impact and business growth.
               </p>
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-vil-cyan/20 to-vil-purple/20 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-6xl font-heading font-bold text-gradient mb-2">VIL</div>
@@ -85,7 +89,17 @@ const AboutSection = () => {
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-primary/10 animate-pulse-glow" />
-            </div>
+            </div> */}
+          <div className="relative">
+          <div className="aspect-square rounded-4xl overflow-hidden bg-gradient-to-br from-vil-cyan/20 to-vil-purple/20 flex items-center justify-center">
+          <img
+            src={heroImage}   // path or URL
+            alt="VIL Logo"
+            className="w-full h-full object-cover"
+          />
+          </div>
+          {/* <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-primary/10 animate-pulse-glow" /> */}
+          </div>
           </div>
         </motion.div>
 

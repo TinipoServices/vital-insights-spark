@@ -61,7 +61,7 @@ const IndustriesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-medium text-sm tracking-wider uppercase">
+          <span className="text-primary font-medium text-1xl tracking-wider uppercase">
             Industries We Serve
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">

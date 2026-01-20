@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import heroImage from "@/assets/logo.png";
 
 const footerLinks = {
   services: [
@@ -9,8 +10,8 @@ const footerLinks = {
     { name: "AI Consulting", href: "#services" },
   ],
   industries: [
-    { name: "Life Sciences", href: "#industries" },
-    { name: "Pharmaceuticals", href: "#industries" },
+    { name: "Life Sciences & Pharmaceuticals", href: "#industries" },
+    // { name: "Pharmaceuticals", href: "#industries" },
     { name: "Retail & CPG", href: "#industries" },
   ],
   company: [
@@ -27,12 +28,25 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
+            {/* <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-vil-cyan to-vil-purple flex items-center justify-center">
                 <span className="text-background font-heading font-bold text-lg">V</span>
               </div>
               <span className="font-heading font-semibold text-lg">Vital Insight Labs</span>
-            </div>
+            </div> */}
+            {/* Logo */}
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="w-20 h-20 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <img
+              src={heroImage}   // path or URL
+              alt="VIL Logo"
+              className="w-full h-full object-cover"
+            />
+              </div>
+              <span className="font-heading font-semibold text-lg text-foreground hidden sm:block">
+                Vital Insight Labs
+              </span>
+            </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Empowering organizations with expert intelligence and automated data operations. 
               From complex data to smarter business outcomes.

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import heroImage from "@/assets/logo.png";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -34,8 +35,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-vil-cyan to-vil-purple flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <span className="text-background font-heading font-bold text-lg">V</span>
+            <div className="w-20 h-15 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <img
+            src={heroImage}   // path or URL
+            alt="VIL Logo"
+            className="w-full h-full object-cover"
+          />
             </div>
             <span className="font-heading font-semibold text-lg text-foreground hidden sm:block">
               Vital Insight Labs

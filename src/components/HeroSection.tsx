@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-neural.jpg";
+import ImageCarousel from "./ImageCarousel";
 
 const HeroSection = () => {
   return (
@@ -43,7 +44,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="section-container relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,17 +57,19 @@ const HeroSection = () => {
               AI-First Data & Digital Excellence
             </span>
           </motion.div>
+          <div>
+            <ImageCarousel />
+          </div>
 
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 mt-6"
           >
-            Transform Data Into
-            <br />
-            <span className="text-gradient">Intelligent Action</span>
+            Transform Data Into Intelligent Action
+            {/* <span className="text-gradient">Intelligent Action</span> */}
           </motion.h1>
 
           {/* Subheading */}
@@ -80,6 +83,8 @@ const HeroSection = () => {
             that drive business growth. From high-performance data architecture to 
             hyper-personalized customer journeys.
           </motion.p>
+
+          
 
           {/* CTA Buttons */}
           <motion.div
@@ -97,17 +102,34 @@ const HeroSection = () => {
             </a>
           </motion.div>
 
+          {/* Scroll Indicator
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
+            >
+              <div className="w-1 h-2 rounded-full bg-primary" />
+            </motion.div>
+          </motion.div> */}
+
+          
+
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8"
           >
             {[
               { value: "AI-First", label: "Approach" },
-              { value: "100+", label: "Projects Delivered" },
-              { value: "24/7", label: "Support" },
+              { value: "24/5", label: "Support" },
               { value: "Global", label: "Reach" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
@@ -123,21 +145,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
-        >
-          <div className="w-1 h-2 rounded-full bg-primary" />
-        </motion.div>
-      </motion.div>
+      
     </section>
   );
 };

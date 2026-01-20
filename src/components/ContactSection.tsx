@@ -1,11 +1,50 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [result, setResult] = useState<"success" | "error" | null>(null);
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setResult(null);
+
+    const formData = new FormData(e.currentTarget);
+
+    // Web3Forms required fields
+    formData.append("access_key", "5cf0711d-0006-41f2-86b9-8e364cbd9c25");
+    formData.append("subject", "New Contact Form Submission");
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("success");
+        e.currentTarget.reset();
+      } else {
+        setResult("error");
+      }
+    } catch {
+      setResult("error");
+    }
+
+    setIsSubmitting(false);
+  };
 
   return (
     <section id="contact" className="py-24 relative">
@@ -43,7 +82,7 @@ const ContactSection = () => {
             <h3 className="font-heading text-2xl font-semibold mb-6">
               Send us a message
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">First Name</label>
@@ -51,6 +90,7 @@ const ContactSection = () => {
                     type="text"
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none"
                     placeholder="John"
+                    name="First Name"
                   />
                 </div>
                 <div>
@@ -59,6 +99,7 @@ const ContactSection = () => {
                     type="text"
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none"
                     placeholder="Doe"
+                    name="Last Name"
                   />
                 </div>
               </div>
@@ -68,6 +109,7 @@ const ContactSection = () => {
                   type="email"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none"
                   placeholder="john@company.com"
+                  name="Email"
                 />
               </div>
               <div>
@@ -76,6 +118,7 @@ const ContactSection = () => {
                   type="text"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none"
                   placeholder="Your Company"
+                  name="Company"
                 />
               </div>
               <div>
@@ -84,11 +127,16 @@ const ContactSection = () => {
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none resize-none"
                   placeholder="Tell us about your project..."
+                  name="Message"
                 />
               </div>
-              <button type="submit" className="btn-primary w-full group">
+              <button
+                type="submit"
+                className="btn-primary w-full group disabled:opacity-60"
+                disabled={isSubmitting}
+              >
                 Send Message
-                <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
               </button>
             </form>
           </motion.div>
