@@ -63,11 +63,10 @@ const ContactSection = () => {
             Get In Touch
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Ready to <span className="text-gradient">Transform</span> Your Data?
+            Ready to <span className="text-gradient">Transform</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Let's discuss how Vital Insight Labs can help you build the neural 
-            pathways for your enterprise AI journey.
+          ⁠Let’s discuss how Vital Insight Labs can partner to support you in your data and digital excellence journey.
           </p>
         </motion.div>
 

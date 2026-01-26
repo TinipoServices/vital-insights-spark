@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import banner1 from "@/assets/banner/banner1.png";
-import banner2 from "@/assets/banner/Banner-2.jpg";
+import banner2 from "@/assets/banner/Banner_8.png";
 import banner3 from "@/assets/banner/Banner-3.jpg";
 import banner5 from "@/assets/banner/Banner-5.jpeg";
 
