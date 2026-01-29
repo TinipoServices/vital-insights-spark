@@ -19,7 +19,7 @@ const ContactSection = () => {
     const formData = new FormData(e.currentTarget);
 
     // Web3Forms required fields
-    formData.append("access_key", "5cf0711d-0006-41f2-86b9-8e364cbd9c25");
+    formData.append("access_key", "e4c6593c-5bb6-4bdc-ac22-d805e7e3770c");
     formData.append("subject", "New Contact Form Submission");
 
     try {
