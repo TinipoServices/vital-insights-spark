@@ -27,9 +27,10 @@ const services = [
     subtitle: "Building the Neural Pathway for your Enterprise AI",
     description: "Modern AI is only as good as the data that feeds it. We design AI-Ready architectures that prioritize data quality, speed, and observability, ensuring your foundation can support the most demanding Large Language Models (LLMs) and autonomous agents.",
     features: [
-      { icon: Database, text: "Modern AI Data Architecture: Designing scalable Data Lakes and Data Mesh frameworks (Snowflake, Databricks, AWS) tailored for high-velocity AI training and inference." },
-      { icon: Cpu, text: "Autonomous Data Engineering: Implementing self-healing ETL/ELT pipelines that use AI to automatically detect schema changes, map disparate sources, and resolve data quality issues." },
-      { icon: Brain, text: "Data Architecture Support: Engineering high-performance Vector Databases and RAG (Retrieval-Augmented Generation) architectures to power enterprise-grade Generative AI." },
+      
+      { icon: Database, text: "Modern AI Data Architecture: Designing scalable and high performing Data Lakes and Data Mesh frameworks (Snowflake, Databricks, AWS) tailored for high-velocity AI training and inference." },
+      { icon: Cpu, text: "Autonomous Data Engineering and Data Application: Implementing self-healing ETL/ELT pipelines that use AI to automatically detect schema changes and resolve data quality issues.  Through a variety of software development and engineering platforms, we build and support data products and applications to meet your unique business needs." },
+      { icon: Brain, text: "Data Ops Service: With focus on automation, orchestration, and quality of data pipelines, our primary goal is to shorten the cycle time between a data request and a delivered insight that drives decision making." },
       { icon: Search, text: "Intelligent Governance & Security: AI-powered monitoring for data lineage, privacy compliance (GDPR/HIPAA), and security threat detection." },
     ],
   },
@@ -43,6 +44,7 @@ const services = [
       { icon: TrendingUp, text: "AI-Augmented Dashboards and Reporting: Moving beyond charts to Insight Engines that automatically highlight anomalies and suggest the Why behind the data to support the commercial decision making" },
       { icon: MessageSquare, text: "Natural Language Querying (NLQ): Enabling non-technical stakeholders to ask, Why did sales dip in Europe? and receive a generated visual and text explanation instantly" },
       { icon: Brain, text: "Predictive & Prescriptive Modelling: Utilizing ML algorithms to move from What happened? to What will happen? and What should we do?" },
+      { icon: Brain, text: "Commercial Intelligence: Expertise built on three strategic pillars: clinical, commercial, and promotional. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions." },
       { icon: PenTool, text: "Automated Narrative Generation: AI-driven executive summaries that translate complex data visualizations into clear, business-ready reports" },
       // { icon: MessageSquare, text: "Competitive Intelligence: Expertise built on three strategic pillars: clinical, commercial, and promotional. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions" },
     ],

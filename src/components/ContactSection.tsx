@@ -161,7 +161,7 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">contact@vitalinsightlabs.com</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
@@ -181,12 +181,12 @@ const ContactSection = () => {
                       San Francisco, CA 94105
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* CTA Card */}
-            <div className="glass-card rounded-2xl p-8 bg-gradient-to-br from-vil-cyan/10 to-vil-purple/10 border-primary/20">
+            {/* <div className="glass-card rounded-2xl p-8 bg-gradient-to-br from-vil-cyan/10 to-vil-purple/10 border-primary/20">
               <h3 className="font-heading text-xl font-semibold mb-3">
                 Schedule a Discovery Call
               </h3>
@@ -198,7 +198,7 @@ const ContactSection = () => {
                 Book a Call
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

@@ -51,7 +51,7 @@ const Footer = () => {
               Empowering organizations with expert intelligence and automated data operations. 
               From complex data to smarter business outcomes.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors"
@@ -70,7 +70,7 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Services */}

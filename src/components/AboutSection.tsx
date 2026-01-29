@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Shield, Zap, Sparkles, Target, Eye } from "lucide-react";
-import heroImage from "@/assets/Cognitive-BI-Detail.jpg";
+import heroImage from "@/assets/Convergenace_2.png";
 
 const pillars = [
   {
@@ -91,13 +91,20 @@ const AboutSection = () => {
               <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-primary/10 animate-pulse-glow" />
             </div> */}
           <div className="relative">
-          <div className="aspect-square rounded-4xl overflow-hidden bg-gradient-to-br from-vil-cyan/20 to-vil-purple/20 flex items-center justify-center">
+          {/* <div className="aspect-square rounded-4xl overflow-hidden bg-gradient-to-br from-vil-cyan/20 to-vil-purple/20 flex items-center justify-center">
           <img
             src={heroImage}   // path or URL
             alt="VIL Logo"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
-          </div>
+          </div> */}
+          <div className="rounded-4xl overflow-hidden bg-gradient-to-br from-vil-cyan/20 to-vil-purple/20 flex items-center justify-center">
+  <img
+    src={heroImage}
+    alt="VIL Logo"
+    className="w-full object-contain"
+  />
+</div>
           {/* <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-primary/10 animate-pulse-glow" /> */}
           </div>
           </div>
