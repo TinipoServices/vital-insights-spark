@@ -29,7 +29,7 @@ const services = [
     features: [
       
       { icon: Database, text: "Modern AI Data Architecture: Designing scalable and high performing Data Lakes and Data Mesh frameworks (Snowflake, Databricks, AWS) tailored for high-velocity AI training and inference." },
-      { icon: Cpu, text: "Autonomous Data Engineering and Data Application: Implementing self-healing ETL/ELT pipelines that use AI to automatically detect schema changes and resolve data quality issues.  Through a variety of software development and engineering platforms, we build and support data products and applications to meet your unique business needs." },
+      { icon: Cpu, text: "Data Engineering and Application: We provide autonomous data engineering and custom application, featuring AI-powered, self-healing pipelines that ensure data integrity and seamless schema adoption." },
       { icon: Brain, text: "Data Ops Service: With focus on automation, orchestration, and quality of data pipelines, our primary goal is to shorten the cycle time between a data request and a delivered insight that drives decision making." },
       { icon: Search, text: "Intelligent Governance & Security: AI-powered monitoring for data lineage, privacy compliance (GDPR/HIPAA), and security threat detection." },
     ],

@@ -118,7 +118,7 @@ const AboutSection = () => {
           className="mb-16"
         >
           <h3 className="font-heading text-2xl sm:text-3xl font-semibold text-center mb-4">
-            Our Approach
+            The DNA
           </h3>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             Built on four core strengths that ensure we don't just solve problems, 
@@ -154,7 +154,7 @@ const AboutSection = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <Target className="w-6 h-6 text-primary" />
-              <h4 className="font-heading font-semibold text-xl">Our Mission</h4>
+              <h4 className="font-heading font-semibold text-xl">Purpose</h4>
             </div>
             <p className="text-muted-foreground">
               To empower organizations with expert intelligence and automated data and digital 
@@ -170,7 +170,7 @@ const AboutSection = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <Eye className="w-6 h-6 text-vil-purple" />
-              <h4 className="font-heading font-semibold text-xl">Our Vision</h4>
+              <h4 className="font-heading font-semibold text-xl">North Star</h4>
             </div>
             <p className="text-muted-foreground">
               To be the most-admired strategic partner in the data-driven journey, revolutionizing 
