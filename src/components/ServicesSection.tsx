@@ -18,6 +18,7 @@ import {
   PenTool,
   Code
 } from "lucide-react";
+import { spawn } from "child_process";
 
 const services = [
   {
@@ -28,10 +29,27 @@ const services = [
     description: "Modern AI is only as good as the data that feeds it. We design AI-Ready architectures that prioritize data quality, speed, and observability, ensuring your foundation can support the most demanding Large Language Models (LLMs) and autonomous agents.",
     features: [
       
-      { icon: Database, text: "Modern AI Data Architecture: Designing scalable and high performing Data Lakes and Data Mesh frameworks (Snowflake, Databricks, AWS) tailored for high-velocity AI training and inference." },
-      { icon: Cpu, text: "Data Engineering and Application: We provide autonomous data engineering and custom application, featuring AI-powered, self-healing pipelines that ensure data integrity and seamless schema adoption." },
-      { icon: Brain, text: "Data Ops Service: With focus on automation, orchestration, and quality of data pipelines, our primary goal is to shorten the cycle time between a data request and a delivered insight that drives decision making." },
-      { icon: Search, text: "Intelligent Governance & Security: AI-powered monitoring for data lineage, privacy compliance (GDPR/HIPAA), and security threat detection." },
+      { icon: Database, text: (
+        <>
+          {" "}
+          <strong>Modern AI Data Architecture:</strong> Designing scalable and high performing{" "}
+          <strong>Data Lakes</strong> and <strong>Data Mesh</strong>{" "}
+          frameworks (Snowflake, Databricks, AWS) tailored for high-velocity AI
+          training and inference.
+        </>
+      ), },
+      { icon: Cpu, text: (
+        <>{" "}
+          <strong>Autonomous Data Engineering and Data Application:</strong> Implementing self-healing ETL/ELT pipelines that use AI to automatically detect schema changes and resolve data quality issues.  Through a variety of software development and engineering platforms, we build and support data products and applications to meet your unique business needs.</> ),},
+      { icon: Brain, text: (
+        <>{" "}
+          <strong>Data Ops Service:</strong> With focus on {" "}
+          <strong>automation</strong>, {" "}
+          <strong>orchestration</strong>, and {" "}
+          <strong>quality</strong> of data pipelines, our primary goal is to shorten the cycle time between a data request and a delivered insight that drives decision making.</>), },
+      { icon: Search, text: (
+        <>{" "}
+          <strong>Intelligent Governance & Security:</strong> AI-powered and automated “by design” frameworks to safeguard the entire data lifecycle. We develop and deploy automated monitoring for data lineage, privacy based access and compliance checks (GDPR/HIPAA) to security threat detection.</>), },
     ],
   },
   {
@@ -41,12 +59,25 @@ const services = [
     subtitle: "From Static Dashboards to Intelligent Copilots",
     description: "We are evolving Business Intelligence from reactive reporting to Prescriptive Intelligence. Vital Insight Labs helps to integrate AI Copilots directly into your BI tools (PBI, Tableau, GLooker, ThoughtSpot, Qlik etc.), allowing users to converse with their data in natural language and receive automated strategic narratives.",
     features: [
-      { icon: TrendingUp, text: "AI-Augmented Dashboards and Reporting: Moving beyond charts to Insight Engines that automatically highlight anomalies and suggest the Why behind the data to support the commercial decision making" },
-      { icon: MessageSquare, text: "Natural Language Querying (NLQ): Enabling non-technical stakeholders to ask, Why did sales dip in Europe? and receive a generated visual and text explanation instantly" },
-      { icon: Brain, text: "Predictive & Prescriptive Modelling: Utilizing ML algorithms to move from What happened? to What will happen? and What should we do?" },
-      { icon: Brain, text: "Commercial Intelligence: Expertise built on three strategic pillars: clinical, commercial, and promotional. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions." },
-      { icon: PenTool, text: "Automated Narrative Generation: AI-driven executive summaries that translate complex data visualizations into clear, business-ready reports" },
-      // { icon: MessageSquare, text: "Competitive Intelligence: Expertise built on three strategic pillars: clinical, commercial, and promotional. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions" },
+      { icon: TrendingUp, text: (
+        <>{" "}
+          <strong>AI-Augmented Dashboards and Reporting:</strong> Moving beyond charts to Insight Engines that automatically highlight anomalies and suggest the Why behind the data to support the commercial decision making</>), },
+      { icon: MessageSquare, text: (
+        <>{" "}
+          <strong>Natural Language Querying (NLQ):</strong> Enabling non-technical stakeholders to ask, Why did sales dip in Europe? and receive a generated visual and text explanation instantly</>), },
+      { icon: Brain, text: (
+        <>{" "}
+          <strong>Predictive & Prescriptive Modelling:</strong> Utilizing ML algorithms to move from What happened? to What will happen? and What should we do?</> ), },
+      { icon: Brain, text: (
+        <>{" "}
+          <strong>Commercial Intelligence:</strong> Expertise built on three strategic pillars: {" "}
+          <strong>clinical, commercial,</strong> and {" "}
+          <strong>promotional</strong>. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions.</>), },
+      { icon: PenTool, text: (
+        <>{" "}
+          <strong>Automated Narrative Generation:</strong> AI-driven executive summaries that translate complex data visualizations into clear, business-ready reports</> ), },
+      // { icon: MessageSquare, text: (
+      //   <>Competitive Intelligence: Expertise built on three strategic pillars: clinical, commercial, and promotional. With decades of experience, we utilize proven frameworks to uncover critical blind spots, empowering business leaders to make proactive, informed decisions</>), },
     ],
   },
   {
@@ -56,16 +87,24 @@ const services = [
     subtitle: "The Art and Science of Digital Dominance",
     description: "At Vital Insight Labs, we believe that high-performance data architecture deserves an equally powerful digital presence. We move beyond simple web presence to create immersive digital ecosystems that drive discovery, engagement, and conversion.",
     features: [
-      { icon: Globe, text: "UI/UX Design: Our designers create intuitive, high-fidelity interfaces that prioritize user journey and accessibility, turning complex data interactions into seamless digital experience" },
-      { icon: Smartphone, text: "Website Design & Development: We build fast, responsive, and secure enterprise websites that serve as the primary engine for your brand’s digital authority" },
+      { icon: Globe, text: (
+        <>{" "}
+          <strong>UI/UX Design and Development:</strong> Our approach integrates {" "}
+          <strong>user-centric design</strong> with {" "}
+          <strong>high-performance engineering</strong> to transform complex ideas into intuitive digital products. We prioritize seamless navigation and accessibility (UI/UX) while utilizing a scalable, modular codebase to ensure the platform is as robust as it is beautiful"</>), },
       { icon: Search, text: (
         <>
-          <div>Digital Marketing</div>
-          <div>Mobile App Development</div>
-          <div>Search Engine Optimization</div>
+          {" "}
+          <strong>Search Engine Optimization:</strong>At VIL we helps our clients to strategies and prioritizes technical precision and semantic alignment. By integrating a streamlined URL architecture with optimized performance metrics and structured data, we facilitate seamless indexing and superior visibility for high-value search queries
         </>
       )},
-      { icon: Code, text: "Discovery & Brand Audit: We conduct deep-dive technical and brand assessments to uncover hidden opportunities and align your digital strategy with core business KPIs" },
+      { icon: Smartphone, text: (
+        <>{" "}
+          <strong>Website & App Design & Development:</strong> We build fast, responsive, and secure enterprise websites and Apps (iOS and Android) that serve as the primary engine for your brand’s digital authority</>), },
+      
+      { icon: Code, text: (
+        <>{" "}
+          <strong>Creative Design Services:</strong> VIL helps the clients to elevate digital touchpoints with purpose-built creative assets designed to convert. We craft high-impact email layouts and dynamic video content that align with your brand's visual language. Our focus is on delivering high-retention experiences that drive user engagement</>), },
     ],
   },
   {
@@ -75,10 +114,18 @@ const services = [
     subtitle: "Navigating the Market with Machine-Enhanced Foresight",
     description: "We combine deep industry expertise (Life Sciences, CPG & Retail) with AI-powered competitive intelligence. We don't just advise on strategy; we provide the tools and platforms to validate it.",
     features: [
-      { icon: TrendingUp, text: "AI Strategy & Roadmap Development: Assessing your AI Maturity and identifying high-impact use cases that deliver immediate ROI" },
-      { icon: Search, text: "Competitive Intelligence: Real-time, AI-driven tracking of competitor moves, clinical trials, and regulatory shifts using automated web-scale scraping and sentiment analysis" },
-      { icon: BarChart3, text: "Commercial Analytics and Market Intelligence: Using advanced patient-flow and market-demand models to optimize product launches, pricing, and market access" },
-      { icon: Brain, text: "Ethical AI & Risk Management: Consulting on responsible AI adoption, ensuring your models are unbiased, transparent, and compliant with global standards" },
+      { icon: TrendingUp, text: (
+        <>{" "}
+          <strong>Machine-Enhanced Foresight:</strong> Combines deep vertical expertise in Life Sciences, CPG, & Retail with AI-powered competitive intelligence to navigate volatile markets</>), },
+      { icon: Search, text: (
+        <>{" "}
+          <strong>Commercial & Market Intelligence:</strong> Optimizes product launches, pricing strategies, and market access through advanced customer flow and market-demand modelling</>), },
+      { icon: BarChart3, text: (
+        <>{" "}
+          <strong>AI-Driven Competitive Tracking:</strong> Employs automated web-scale scraping and sentiment analysis to provide real-time tracking of competitor movements, asset/brand movements and, and regulatory shifts</>), },
+      { icon: Brain, text: (
+        <>{" "}
+          <strong>Strategic Roadmap & Risk Management:</strong> VIL provides customized framework which can act as a structured guide to transition your organization from its current state to a future-proof destination. We provide consulting by identifying, quantifying, and mitigating uncertainties inform the optimisation of the strategic plan</>), },
     ],
   },
   {
@@ -88,10 +135,18 @@ const services = [
     subtitle: "Deploying the next generation of autonomous business partners",
     description: "We specialize in the cutting edge of Agentic AI—autonomous agents that don't just provide information but execute complex workflows to optimize your operations.",
     features: [
-      { icon: Brain, text: "Generative AI & Agentic Workflows: Developing custom AI agents for automated medical writing, legal review, and customer support orchestration" },
-      { icon: Database, text: "MLOps & LLMOps: Building the infrastructure to deploy, monitor, and retrain your AI models at scale, preventing Model Drift and ensuring long-term accuracy" },
-      { icon: Cpu, text: "Agentic Data Ops: Deploying autonomous AI workers to manage routine data maintenance, cleansing, and system-to-system integrations" },
-      { icon: Globe, text: "Edge AI & IoT Analytics: Processing data at the source to enable real-time decision-making in manufacturing, logistics, and digital health" },
+      { icon: Brain, text: (
+        <>{" "}
+          <strong>Generative AI & Agentic Workflows:</strong> Developing custom AI agents for automated medical writing, legal review, and customer support orchestration</>), },
+      { icon: Database, text: (
+        <>{" "}
+          <strong>MLOps & LLMOps:</strong> Building the infrastructure to deploy, monitor, and retrain your AI models at scale, preventing Model Drift and ensuring long-term accuracy</>), },
+      { icon: Cpu, text: (
+        <>{" "}
+          <strong>Agentic Data Ops:</strong> Deploying autonomous AI workers to manage routine data maintenance, cleansing, and system-to-system integrations</>), },
+      { icon: Globe, text: (
+        <>{" "}
+          <strong>Edge AI & IoT Analytics:</strong> Processing data at the source to enable real-time decision-making in manufacturing, logistics, and digital health</>), },
     ],
   },
 ];

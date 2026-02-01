@@ -66,7 +66,7 @@ const IndustriesSection = () => {
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-6">
             Specialized Solutions for{" "}
-            <span className="text-gradient">High-Stakes Industries</span>
+            <span className="text-gradient">High-Stake Industries</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             We deliver AI-integrated solutions for industries where data complexity 

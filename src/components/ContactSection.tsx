@@ -5,16 +5,22 @@ import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState<"success" | "error" | null>(null);
 
+  const [snackbar, setSnackbar] = useState<{
+    type: "success" | "error" | "";
+    message: string;
+  }>({ type: "", message: "" });
+  
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setResult(null);
+    // setResult(null);
 
     const formData = new FormData(e.currentTarget);
 
@@ -23,27 +29,41 @@ const ContactSection = () => {
     formData.append("subject", "New Contact Form Submission");
 
     try {
-      const response = await fetch(
-        "https://api.web3forms.com/submit",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
-
-      const data = await response.json();
-
-      if (data.success) {
-        setResult("success");
-        e.currentTarget.reset();
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      console.log(response)
+      console.log(response.ok)
+      // ✅ SUCCESS if request reached server
+      if (response.ok) {
+        setSnackbar({
+          type: "success",
+          message: "Message sent successfully! We’ll get back to you shortly.",
+        });
+  
+        formRef.current?.reset();
       } else {
-        setResult("error");
+        setSnackbar({
+          type: "error",
+          message: "Something went wrong. Please try again.",
+        });
       }
-    } catch {
-      setResult("error");
+    } catch (err) {
+      console.error("Submission error:", err);
+  
+      setSnackbar({
+        type: "error",
+        message: "Network error. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
+  
+    // auto-hide snackbar
+    setTimeout(() => {
+      setSnackbar({ type: "", message: "" });
+    }, 3000);
   };
 
   return (
@@ -81,7 +101,7 @@ const ContactSection = () => {
             <h3 className="font-heading text-2xl font-semibold mb-6">
               Send us a message
             </h3>
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6" ref={formRef} onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">First Name</label>
@@ -131,11 +151,11 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
-                className="btn-primary w-full group disabled:opacity-60"
                 disabled={isSubmitting}
+                className="btn-primary w-full group disabled:opacity-60"
               >
-                Send Message
-                <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"/>
+                {isSubmitting ? "Sending..." : "Send Message"}
+                <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
           </motion.div>
@@ -202,6 +222,15 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </div>
+      {snackbar.message && (
+  <div
+    className={`fixed bottom-6 right-6 z-50 px-6 py-4 rounded-xl shadow-lg
+    text-white text-sm font-medium transition-all duration-300
+    ${snackbar.type === "success" ? "bg-green-600" : "bg-red-600"}`}
+  >
+    {snackbar.message}
+  </div>
+)}
     </section>
   );
 };
