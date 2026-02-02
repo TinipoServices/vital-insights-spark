@@ -64,9 +64,9 @@ const AboutSection = () => {
             Where Data Engineering Meets{" "}
             <span className="text-gradient">Digital Excellence</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          {/* <p className="text-muted-foreground text-lg">
             In an era where information is abundant, but clarity is rare, {" "}<span className="font-bold">Vital Insight Labs</span>{" "} serves as a premier Analytics, Consulting, and Digital Service partner that builds the pathways to enable and scale AI and the bring digital excellence for your business.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Story Section */}
@@ -133,7 +133,7 @@ const AboutSection = () => {
           </h3>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
           Our methodology is built on four core strengths that ensure we don't just solve problems, but drive sustainable transformation. Whether it’s optimizing real-time data pipelines or assessing market performance, forecasting market shifts, to optimising digital customer experience, our goal is {" "}
-          <span className="font-bold">Radical Simplification</span>{" "}.
+          <span className="font-bold">Radical Simplification</span>.
           </p>
 
           {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

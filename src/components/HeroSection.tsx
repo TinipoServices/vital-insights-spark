@@ -79,9 +79,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            We build the neural pathways for enterprise AI and the digital storefronts 
-            that drive business growth. From high-performance data architecture to 
-            hyper-personalized customer journeys.
+            In an era where information is abundant, but clarity is rare, {" "} <strong>Vital Insight Labs </strong> serves as a premier Analytics, Consulting, and Digital Service partner that builds the pathways to enable and scale AI and the bring digital excellence for your business.
           </motion.p>
 
           

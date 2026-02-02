@@ -25,8 +25,8 @@ const services = [
     id: "data-engineering",
     icon: Brain,
     title: "AI-Driven Data Engineering & Architecture",
-    subtitle: "Building the Neural Pathway for your Enterprise AI",
-    description: "Modern AI is only as good as the data that feeds it. We design AI-Ready architectures that prioritize data quality, speed, and observability, ensuring your foundation can support the most demanding Large Language Models (LLMs) and autonomous agents.",
+    subtitle: "Building the \"Neural Pathway\" for your Enterprise AI",
+    description: "Modern AI is only as good as the data that feeds it. We design \"AI-Ready\" architectures that prioritize data quality, speed, and observability, ensuring your foundation can support the most demanding Large Language Models (LLMs) and autonomous agents.",
     features: [
       
       { icon: Database, text: (
